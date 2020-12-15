@@ -101,7 +101,7 @@ body {
   bottom: 10px;
   animation-name: look-about;
   animation-duration: 3s;
-  animation-play-state: inherit;
+  animation-play-state: running;
   animation-iteration-count: infinite;
 
 }
