@@ -1,0 +1,313 @@
+body {
+  background-color: #ffe9ec;
+}
+
+
+#container {
+  position: relative;
+  margin: auto;
+	top: 100px;
+	width: 500px;
+}
+
+#cathead {
+  animation-play-state: paused;
+
+}
+
+.cat-head {
+  background-color: lightgray;
+  width: 200px;
+  height: 150px;
+  border: 20px solid lightgray;
+  border-radius: 50%;
+  margin: auto;
+  animation-play-state: inherit;
+
+}
+
+.ear {
+  position: relative;
+  width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid lightgray;
+  z-index: -1;
+}
+
+.ear.left {
+  bottom: 60px;
+  right: 30px;
+  transform: rotate(-35deg);
+}
+
+.ear.right {
+  left: 160px;
+  top: -137px;
+  transform: rotate(35deg);
+}
+
+.innerear {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 60px solid white;
+  z-index: -1;
+}
+
+.innerear.left {
+  bottom: -10px;
+  right: 20px;
+}
+
+.innerear.right {
+  left: -20px;
+  top: 10px;
+}
+
+.eye {
+  position: relative;
+  background-color: #3e6e5c;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation-play-state: inherit;
+}
+
+#eye {
+  animation-play-state: inherit;
+}
+
+.eye.left {
+  left: 30px;
+  bottom: 100px;
+}
+
+.eye.right {
+  left: 120px;
+  bottom: 150px;
+}
+
+.eye-shine {
+  position: absolute;
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  left: 10px;
+  bottom: 10px;
+  animation-name: look-about;
+  animation-duration: 3s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes look-about {
+  0% {left:30px;}
+  5% {left:30px;}
+  50% {left:10px;}
+  55% {left:10px;}
+  100% {left:30px;}
+}
+
+#cathead:hover {
+ animation-play-state: running;
+}
+
+.nose {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  border-style: solid;
+  border-width: 20px 12.5px 0 12.5px;
+  border-color: black;
+  border-radius: 80%;
+  left: 87px;
+  bottom: 180px;
+}
+
+.mouth {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.mouth.left {
+  right: 28px;
+  bottom: 5px;
+}
+
+.mouth.right {
+  transform: scaleX(-1);
+  bottom: 35px;
+  right: 2px;
+}
+
+
+.whisker {
+  position: relative;
+  width: 60px;
+  height: 20px;
+  background-color: transparent;
+  border-top: 3px solid black;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+
+}
+
+.whisker.leftone {
+  transform: rotate(20deg);
+  right: 55px;
+  bottom:  200px;
+}
+
+.whisker.lefttwo {
+  right: 55px;
+  bottom:  210px;
+}
+
+.whisker.leftthree {
+  transform: rotate(-15deg);
+  right: 50px;
+  bottom: 222px;
+}
+
+.whisker.rightone {
+  transform: rotate(-20deg) scaleX(-1);
+  left: 190px;
+  bottom: 275px;
+}
+
+.whisker.righttwo {
+  transform: scaleX(-1);
+  left: 190px;
+  bottom: 285px;
+}
+
+.whisker.rightthree {
+  transform: rotate(15deg) scaleX(-1);
+  left: 185px;
+  bottom: 298px;
+}
+
+.left-whiskers {
+  animation-duration: 10s;
+  animation-play-state: running;
+  animation: rotation1 2s infinite linear;
+}
+
+.right-whiskers {
+  animation-duration: 10s;
+  animation-play-state: running;
+  animation: rotation2 2s infinite linear;
+}
+
+@keyframes rotation1 {
+  33% {
+  transform: rotate(0deg);
+}
+66% {
+  transform: rotate(1deg);
+}
+100%{
+  transform: rotate(-1deg):
+}
+}
+
+@keyframes rotation2 {
+  33% {
+  transform: rotate(0deg);
+}
+66% {
+  transform: rotate(-1deg);
+}
+100%{
+  transform: rotate(1deg):
+}
+}
+
+.fish-body {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  background-color: #ff9d00;
+  border-radius: 100% 0px;
+  transform: rotate(45deg);
+}
+
+.fish-tail {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid #ff9d00;
+}
+
+.fish-tail {
+  transform: rotate(90deg);
+  left: 150px;
+  bottom: 80px;
+}
+
+.bite {
+  opacity: 0;
+}
+
+.fish:hover .bite{
+  opacity: 1.0;
+}
+
+.tooth1 {
+  position: relative;
+  background-color: #ffe9ec;
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  bottom: -23px;
+  left: 17px;
+}
+
+.tooth2 {
+  position: relative;
+  background-color: #ffe9ec;
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  bottom: -3px;
+  left: 25px;
+}
+
+.tooth3 {
+  position: relative;
+  background-color: #ffe9ec;
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  bottom: 17px;
+  left: 33px;
+}
+
+.fish-eye {
+  position: relative;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  bottom: -15px;
+  left: 70px;
+}
